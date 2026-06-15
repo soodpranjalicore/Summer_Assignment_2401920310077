@@ -1,0 +1,14 @@
+public class ReverseLinkedList {
+    public ListNode reverseList(ListNode head) {
+        ListNode pre = null;
+        ListNode curr = head;
+
+        while (curr != null) {
+            ListNode nextNode = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = nextNode;
+        }
+        return pre;
+    }
+}
